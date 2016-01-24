@@ -1,0 +1,3 @@
+1- controller as sintax
+2- nomenclatura
+3- Pasar a typescript
