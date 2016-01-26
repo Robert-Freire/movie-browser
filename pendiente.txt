@@ -1,3 +1,8 @@
-1- controller as sintax
-2- nomenclatura
-3- Pasar a typescript
+2- tesstear contrller AS syntax
+3- add tsd. Bajar angular definitions
+3- compilar typescript
+
+
+npm install -g typescript
+http://definitelytyped.org/tsd/
+https://github.com/Microsoft/TypeScript-Sublime-Plugin
