@@ -1,7 +1,7 @@
 var moviesBrowserApp = angular.module('moviesBrowserApp', []);
 
-moviesBrowserApp.controller('MoviesController', function ($scope) {
-	$scope.movies = [{
+moviesBrowserApp.controller('MoviesController', function () {
+	this.movies = [{
 		"overview": "Thirty years after defeating the Galactic Empire, Han Solo and his allies face a new threat from the evil Kylo Ren and his army of Stormtroopers.",
 		"title": "Star Wars: The Force Awakens",
 		"release_date": "2015-12-18",
@@ -21,5 +21,5 @@ moviesBrowserApp.controller('MoviesController', function ($scope) {
 		"popularity": 44.097331,
 		"vote_average": 7.3
 	}];
-	$scope.orderProp = 'popularity';
+	this.orderProp = 'popularity';
 });

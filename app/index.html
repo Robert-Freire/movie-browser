@@ -8,7 +8,7 @@
 	<script src="../bower_components/angular/angular.js"></script>
 	<script src="./movies/movies.controller.js"></script>
 </head>
-<body ng-controller="MoviesController">
+<body ng-controller="MoviesController as moviesCtrl">
 
 	<div class="container-fluid">
 		<div class="row">
@@ -25,7 +25,7 @@
 			<div class="col-md-10">
 				<!--Body content-->
 				<ul class="movies">
-					<li ng-repeat="movie in movies | filter:query  | orderBy:orderProp">
+					<li ng-repeat="movie in moviesCtrl.movies | filter:query  | orderBy:orderProp">
 						<span>{{movie.title}}</span>
 						<p>{{movie.overview}}</p>
 					</li>
