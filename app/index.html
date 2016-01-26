@@ -1,25 +1,37 @@
 <!doctype html>
 <html lang="en" ng-app="moviesBrowserApp">
 <head>
-  <meta charset="utf-8">
-  <title>Movie Browser</title>
-  <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css">
-  <link rel="stylesheet" href="../css/app.css">
-  <script src="../bower_components/angular/angular.js"></script>
-  <script src="./movies/movies.controller.js"></script>
+	<meta charset="utf-8">
+	<title>Movie Browser</title>
+	<link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css">
+	<link rel="stylesheet" href="../css/app.css">
+	<script src="../bower_components/angular/angular.js"></script>
+	<script src="./movies/movies.controller.js"></script>
 </head>
-<body>
-
 <body ng-controller="MoviesController">
 
-  <ul>
-    <li ng-repeat="movie in movies">
-      <span>{{movie.title}}</span>
-      <p>{{movie.overview}}</p>
-    </li>
-  </ul>
-
-</body>
-
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-2">
+				<!--Sidebar content-->
+				Search: <input ng-model="query">
+				Sort by:
+				<select ng-model="orderProp">
+					<option value="title">Alphabetical</option>
+					<option value="popularity">Popularity</option>
+					<option value="vote_average">Vote</option>					
+				</select>
+			</div>
+			<div class="col-md-10">
+				<!--Body content-->
+				<ul class="movies">
+					<li ng-repeat="movie in movies | filter:query  | orderBy:orderProp">
+						<span>{{movie.title}}</span>
+						<p>{{movie.overview}}</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
 </body>
 </html>
