@@ -4,7 +4,7 @@
         "noImplicitAny": true,
         "removeComments": true,
         "preserveConstEnums": true,
-        "out": "app/tsc.js",
+        "out": "app/movies.js",
         "sourceMap": true
     },
     "exclude": [

@@ -1,8 +1,1 @@
-2- tesstear contrller AS syntax
-3- add tsd. Bajar angular definitions
-3- compilar typescript
-
-
-npm install -g typescript
-http://definitelytyped.org/tsd/
-https://github.com/Microsoft/TypeScript-Sublime-Plugin
+Clean generated files (js) from github
