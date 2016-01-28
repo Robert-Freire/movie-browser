@@ -1,1 +1,2 @@
-Clean generated files (js) from githubx
+Desactivar efecto {{}}
+Conectarse a la web de movies
