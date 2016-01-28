@@ -9,8 +9,11 @@
     },
     "exclude": [
         "node_modules",
-        "bower_compnents",
+        "bower_components",
         "data",
-        "css"
+        "css",
+        "typings/main",
+        "typings/main.d.ts",
+        "typings/browser"
     ]
 }

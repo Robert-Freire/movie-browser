@@ -1,6 +1,6 @@
 var app;
 (function (app) {
-    angular.module("app", []);
+    angular.module("app", ["app.movies"]);
 })(app || (app = {}));
 var app;
 (function (app) {
