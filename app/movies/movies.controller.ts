@@ -1,3 +1,4 @@
+/// <reference path="movies.module.ts"/>
 module app.movies {
     "use strict";
 
@@ -36,5 +37,5 @@ module app.movies {
 	}
 
 	angular.module("app.movies")
-        .directive("MoviesController", MoviesController);
+        .controller("MoviesController", MoviesController);
 }
