@@ -4,3 +4,5 @@ Para el curso hay que comentar
 	2. - Nomenclaturaa
 	3. - Estructura de directorios
 	4. - Typescript. Namespaces
+
+	5- Desactivar efecto {{}}
