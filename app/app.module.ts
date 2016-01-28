@@ -1,3 +1,3 @@
-module app {
-	angular.module("app", ["app.movies"]);
+namespace app {
+    angular.module("app", ["app.movies"]);
 }
