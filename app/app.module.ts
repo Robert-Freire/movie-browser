@@ -1,3 +1,7 @@
 namespace app {
-    angular.module("app", ["app.movies"]);
+	'use strict';
+
+    angular.module('app', [
+    	'app.dataservices',
+    	'app.movies']);
 }
