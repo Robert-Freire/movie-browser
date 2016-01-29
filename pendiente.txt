@@ -1,8 +1,2 @@
-Desactivar efecto {{}}
 Conectarse a la web de movies
 Revisar con https://github.com/johnpapa/generator-hottowel
-
-Instalar sublimelinter
-Instalar SublimeLinter-contrib-tslint
-Configurar  "translate_tabs_to_spaces": true en Preferences_user
-

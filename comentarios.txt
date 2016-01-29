@@ -6,3 +6,4 @@ Para el curso hay que comentar
 	4. - Typescript. Namespaces
 
 	5- Desactivar efecto {{}}
+    6- Diferencias de comportamiento con this, Entre function () y () =>
