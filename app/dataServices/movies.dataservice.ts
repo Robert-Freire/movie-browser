@@ -8,7 +8,7 @@ namespace app.dataservices {
     }
 
     class MoviesDataService implements IMoviesDataService {
-        constructor(private $http: ng.IHttpService) {
+        constructor(private $http: ng.IHttpService, private $q: ng.IQService) {
         }
 
         private api_key: string = 'ba7dc0d5812ddda58e32b566e91d4688';
@@ -17,9 +17,12 @@ namespace app.dataservices {
         public get(): ng.IPromise<app.model.IMovies[]> {
             var path = 'http://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=' + this.api_key;
 
-            return this.$http.get(path).success((data) => {
-                return data.results;
+            var deferred = this.$q.defer();
+            this.$http.get(path).success((data) => {
+                deferred.resolve(data.results);
             });
+
+            return deferred.promise;
         }
     }
     angular.module('app.dataservices').service('moviesdataservice', MoviesDataService);
