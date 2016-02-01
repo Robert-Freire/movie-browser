@@ -10,6 +10,7 @@ namespace app.movies {
     class MoviesController {
         public movies: app.model.IMovies[] = [];
         public orderProp: string;
+        public imagesUri: string;
 
         static $inject: Array<string> = ['moviesdataservice'];
 
@@ -20,6 +21,7 @@ namespace app.movies {
             });
 
             this.orderProp = 'popularity';
+            this.imagesUri = this.moviesdataservice.imagesUri;
         };
     }
 

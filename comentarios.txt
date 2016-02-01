@@ -7,3 +7,6 @@ Para el curso hay que comentar
 
 	5- Desactivar efecto {{}}
     6- Diferencias de comportamiento con this, Entre function () y () =>
+
+Encuesta
+

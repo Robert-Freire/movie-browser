@@ -28,8 +28,9 @@
 			<div class="col-md-10">
 				<!--Body content-->
 				<ul class="movies">
-					<li ng-repeat="movie in moviesCtrl.movies | filter:query  | orderBy:orderProp">
-						<span>{{movie.title}}</span>
+					<li ng-repeat="movie in moviesCtrl.movies | filter:query  | orderBy:moviesCtrl.orderProp">
+						<img src="{{moviesCtrl.imagesUri}}\{{movie.poster_path}}">
+						<span><b>{{movie.title}}</b></span>
 						<p>{{movie.overview}}</p>
 					</li>
 				</ul>

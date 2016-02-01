@@ -1,2 +1,3 @@
-Conectarse a la web de movies
 Revisar con https://github.com/johnpapa/generator-hottowel
+
+Convertir return value de dataservice a promesa. $q
