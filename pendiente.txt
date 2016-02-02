@@ -1,4 +1,4 @@
 Revisar con https://github.com/johnpapa/generator-hottowel
 
-Crear startup de app
 Poner a la derecha datos de la peli que estamos visualizando
+Mover uris a json de configuracion de constantes

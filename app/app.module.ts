@@ -9,9 +9,15 @@
 
 
 namespace app {
-	'use strict';
 
     angular.module('app', [
-    	'app.dataservices',
-    	'app.movies']);
+		'app.dataservices',
+		'app.movies']);
+
+
 }
+angular.element(document).ready(() => {
+	angular.bootstrap(document, ['app'], {
+		strictDi: true
+	});
+});
