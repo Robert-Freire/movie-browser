@@ -1,4 +1,3 @@
-/// <reference path="dataservices.module.ts"/>
 namespace app.dataservices {
     'use strict';
 
@@ -18,7 +17,7 @@ namespace app.dataservices {
             var path = 'http://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=' + this.api_key;
 
             var deferred = this.$q.defer();
-            this.$http.get(path).success((data) => {
+            this.$http.get(path).success((data: any) => {
                 deferred.resolve(data.results);
             });
 

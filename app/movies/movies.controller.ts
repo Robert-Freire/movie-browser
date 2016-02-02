@@ -1,4 +1,3 @@
-/// <reference path="movies.module.ts"/>
 namespace app.movies {
     'use strict';
 

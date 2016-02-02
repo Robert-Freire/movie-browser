@@ -4,8 +4,10 @@
         "noImplicitAny": true,
         "removeComments": true,
         "preserveConstEnums": true,
-        "out": "app/movies.js",
-        "sourceMap": true
+        "outFile": "app/movies.js",
+        "sourceMap": true,
+        "experimentalDecorators": true,
+        "target":"ES5"
     },
     "exclude": [
         "node_modules",
@@ -13,7 +15,6 @@
         "data",
         "css",
         "typings/main",
-        "typings/main.d.ts",
-        "typings/browser"
+        "typings/main.d.ts"
     ]
 }

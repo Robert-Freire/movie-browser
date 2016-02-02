@@ -7,6 +7,7 @@ Para el curso hay que comentar
 
 	5- Desactivar efecto {{}}
     6- Diferencias de comportamiento con this, Entre function () y () =>
+    7- Pasar app de auto a codigo
 
 Encuesta
 
@@ -15,3 +16,6 @@ Encuesta
 Referencias
 https://github.com/seanhess/angularjs-typescript
 https://www.youtube.com/watch?v=u6TeBM_SC8w
+
+https://github.com/johnpapa/hottowel-angular-typescript
+https://channel9.msdn.com/Events/Build/2015/3-680
