@@ -14,27 +14,27 @@
 <body class="ng-cloak" ng-controller="MoviesController as moviesCtrl">
 
 	<div class="container-fluid">
-		<div class="row">
-			<div class="col-md-2">
-				<!--Sidebar content-->
-				Search: <input ng-model="query">
-				Sort by:
-				<select ng-model="orderProp">
-					<option value="title">Alphabetical</option>
-					<option value="popularity">Popularity</option>
-					<option value="vote_average">Vote</option>					
-				</select>
-			</div>
-			<div class="col-md-10">
-				<!--Body content-->
-				<ul class="movies">
-					<li ng-repeat="movie in moviesCtrl.movies | filter:query  | orderBy:moviesCtrl.orderProp">
-						<img src="{{moviesCtrl.imagesUri}}\{{movie.poster_path}}">
-						<span><b>{{movie.title}}</b></span>
-						<p>{{movie.overview}}</p>
-					</li>
-				</ul>
-			</div>
+		<div class="titleZone">
+			<h3> The Movie browser </h3>
+		</div>
+		<div class="searchZone">
+			<!--Sidebar content-->
+			Search: <input ng-model="query">
+			Sort by:
+			<select ng-model="moviesCtrl.orderProp">
+				<option value="title">Alphabetical</option>
+				<option value="popularity">Popularity</option>
+				<option value="vote_average">Vote</option>					
+			</select>
+		</div>
+		<div >
+			<!--Body content-->
+			<ul class="movies row">
+				<li ng-repeat="movie in moviesCtrl.movies | filter:query  | orderBy:moviesCtrl.orderProp" class="col-md-3 movie">
+					<div><img src="{{moviesCtrl.imagesUri}}{{movie.poster_path}}"></div>
+					{{movie.title}}			
+				</li>
+			</ul>
 		</div>
 	</div>
 </body>

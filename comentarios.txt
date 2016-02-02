@@ -10,3 +10,8 @@ Para el curso hay que comentar
 
 Encuesta
 
+
+
+Referencias
+https://github.com/seanhess/angularjs-typescript
+https://www.youtube.com/watch?v=u6TeBM_SC8w

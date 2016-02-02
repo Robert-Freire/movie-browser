@@ -1,8 +1,17 @@
 
-body {
-  padding-top: 20px;
-}
+
 
 .movies {
   list-style: none;
+}
+.movie{
+    border: 1px;
+    padding: 10px;
+    margin: 20px;
+}
+.movie img{
+    vertical-align: bottom;
+}
+.searchZone{
+    height: 50px;
 }
