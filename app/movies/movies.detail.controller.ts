@@ -1,32 +1,30 @@
-namespace app.movies {
+import { Events } from '../core/events';
+import { IMovie } from '../model/movies';
+import { IMoviesDataService } from '../dataservices/movies.dataservice';
 
-    interface IMoviesDetailController {
-        movie: app.model.IMovie;
-    }
+export interface IMoviesDetailController {
+    movie: IMovie;
+}
 
-    class MoviesDetailController {
-        public movie: app.model.IMovie;
+export class MoviesDetailController {
+    public movie: IMovie;
 
-        static $inject: Array<string> = ['moviesdataservice', '$rootScope'];
+    static $inject: Array<string> = ['moviesdataservice', '$rootScope'];
 
-        constructor(
-            private moviesdataservice: app.dataservices.IMoviesDataService,
-            private $rootScope: ng.IRootScopeService) {
+    constructor(
+        private moviesdataservice: IMoviesDataService,
+        private $rootScope: ng.IRootScopeService) {
 
-            this.movie = <app.model.IMovie>{ };
+        this.movie = <IMovie>{ };
 
-            this.$rootScope.$on(app.core.Events.LoadMovie, (event: ng.IAngularEvent, id: string) => {
-                this.loadMovie(id);
-            });
-        };
+        this.$rootScope.$on(Events.LoadMovie, (event: ng.IAngularEvent, id: string) => {
+            this.loadMovie(id);
+        });
+    };
 
-        private loadMovie (id: string) {
-            this.moviesdataservice.get(id).then((data: model.IMovie) => {
-                this.movie = data;
-            });
-        };
-    }
-
-    angular.module('app.movies')
-        .controller('MoviesDetailController', MoviesDetailController);
+    private loadMovie (id: string) {
+        this.moviesdataservice.get(id).then((data: IMovie) => {
+            this.movie = data;
+        });
+    };
 }

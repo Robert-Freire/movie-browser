@@ -1,36 +1,15 @@
-// 'use strict';  
-// var webpack = require('webpack'),  
-// path = require('path');
-
-// var APP = __dirname + '/app';
-
-// module.exports = {  
-//     context: APP,
-//     entry: {
-//         app: ['webpack/hot/dev-server', './movies.js']
-//     },
-//     plugins: [  
-// 	    new webpack.HotModuleReplacementPlugin()
-// 	],
-//     output: {
-//         path: APP,
-//         filename: 'bundle.js'
-//     }
-// };
-
-
 'use strict';  
 var webpack = require('webpack');
 
 //    path = require('path');
 
-var APP = __dirname + '/app';
+var APP = __dirname; // + '/app';
 
 module.exports = {
     context: APP,
-    entry: './app.module.ts',
+    entry: './out/index.js',
     output: {
-        filename: './bundle.js'
+        filename: './app/bundle.js'
     },
 
     // Turn on sourcemaps
@@ -38,6 +17,9 @@ module.exports = {
 
     resolve: {
         extensions: ['', '.webpack.js', '.web.js', '.ts', '.js']
+    },
+    resolveLoader: {
+        modulesDirectories: ["node_modules"]
     },
 
     // // Add minification
@@ -47,8 +29,12 @@ module.exports = {
 
     module: {
         loaders: [
-//            { test: /\.ts$/, loader: 'ts-loader'}
-            { test: /\.ts$/, loader: 'webpack-typescript?target=ES5'}
+            { test: /\.ts$/, loader: 'ts-loader'},
+            { test: /\.css$/, loader: 'style-loader!css-loader'},
+            { test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, loader: "file" },
+            { test: /\.(woff|woff2)$/, loader:"url?prefix=font/&limit=5000" },
+            { test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/, loader: "url?limit=10000&mimetype=application/octet-stream" },
+            { test: /\.svg(\?v=\d+\.\d+\.\d+)?$/, loader: "url?limit=10000&mimetype=image/svg+xml" }
         ]
     }
 }

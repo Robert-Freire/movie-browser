@@ -3,10 +3,9 @@
 <head>
 	<meta charset="utf-8">
 	<title>Movie Browser</title>
-	<link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css">
-	<link rel="stylesheet" href="../css/app.css">
-	<script src="../bower_components/angular/angular.js"></script>
-	<script src="./movies.js"></script>
+
+	<script src="./bundle.js"></script>
+	
     <style>
 	    .ng-cloak {
 	      display: none !important;
@@ -35,7 +34,7 @@
 					<!--Body content-->
 					<ul class="movies row">
 						<li ng-repeat="movie in moviesListCtrl.movies | filter:query  | orderBy:moviesListCtrl.orderProp" class="col-md-3 movie" ng-click="moviesListCtrl.loadMovie(movie.id)">
-							<div><img ng-src="{{moviesListCtrl.imagesUri}}{{movie.poster_path}}"></div>{{movie.title}}
+							<div><img ng-src="{{moviesListCtrl.imagesUrl}}{{movie.poster_path}}"></div>{{movie.title}}
 						</li>
 					</ul>
 				</div>

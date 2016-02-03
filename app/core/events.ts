@@ -1,8 +1,5 @@
+import './core.module';
 
-namespace app.core {
-
-	export class Events {
-		static LoadMovie = 'LoadMovie';
-	}
-
+export class Events {
+	static LoadMovie = 'LoadMovie';
 }

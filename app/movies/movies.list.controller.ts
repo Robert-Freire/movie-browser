@@ -1,35 +1,36 @@
-namespace app.movies {
+import { Events } from '../core/events';
+import { IMovie } from '../model/movies';
+import { IMoviesDataService } from '../dataservices/movies.dataservice';
 
-    interface IMoviesListController {
-        movies: app.model.IMovie;
-        orderProp: string;
-        loadMovie(id: string): void;
-    }
 
-    class MoviesListController {
-        public movies: app.model.IMovie[] = [];
-        public orderProp: string;
-        public imagesUri: string;
-
-        static $inject: Array<string> = ['moviesdataservice', '$rootScope'];
-
-        constructor(
-            private moviesdataservice: app.dataservices.IMoviesDataService,
-            private $rootScope: ng.IRootScopeService) {
-
-            this.moviesdataservice.getList().then((data: model.IMovie[]) => {
-                this.movies = data;
-            });
-
-            this.orderProp = 'popularity';
-            this.imagesUri = this.moviesdataservice.imagesUri;
-        };
-
-        public loadMovie(id: string) {
-            this.$rootScope.$emit(app.core.Events.LoadMovie, id);
-        }
-    }
-
-    angular.module('app.movies')
-        .controller('MoviesListController', MoviesListController);
+export interface IMoviesListController {
+    movies: IMovie;
+    orderProp: string;
+    imagesUrl: string;
+    loadMovie(id: string): void;
 }
+
+export class MoviesListController {
+    public movies: IMovie[] = [];
+    public orderProp: string;
+    public imagesUrl: string;
+
+    static $inject: Array<string> = ['moviesdataservice', '$rootScope'];
+
+    constructor(
+        private moviesdataservice: IMoviesDataService,
+        private $rootScope: ng.IRootScopeService) {
+
+        this.moviesdataservice.getList().then((data: IMovie[]) => {
+            this.movies = data;
+        });
+
+        this.orderProp = 'popularity';
+        this.imagesUrl = this.moviesdataservice.imagesUrl;
+    };
+
+    public loadMovie(id: string) {
+        this.$rootScope.$emit(Events.LoadMovie, id);
+    }
+}
+    

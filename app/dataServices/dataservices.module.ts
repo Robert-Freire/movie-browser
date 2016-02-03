@@ -1,4 +1,4 @@
+import { MoviesDataService } from  './movies.dataservice';
 
-namespace app.dataservices {
-	angular.module('app.dataservices', []);
-}
+angular.module('app.dataservices', ['app.core'])
+    .service('moviesdataservice', MoviesDataService);

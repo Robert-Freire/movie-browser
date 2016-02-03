@@ -3,6 +3,7 @@
   "devDependencies": {},
   "ambientDependencies": {
     "angular": "github:DefinitelyTyped/DefinitelyTyped/angularjs/angular.d.ts#3bebbe1baee04846cc46ed7249e8117e4cd7c7ff",
-    "jquery": "github:DefinitelyTyped/DefinitelyTyped/jquery/jquery.d.ts#f7819b3f77e68cb240801d39b7a340eb6477b07b"
+    "jquery": "github:DefinitelyTyped/DefinitelyTyped/jquery/jquery.d.ts#f7819b3f77e68cb240801d39b7a340eb6477b07b",
+    "systemjs": "github:DefinitelyTyped/DefinitelyTyped/systemjs/systemjs.d.ts#83af898254689400de8fb6495c34119ae57ec3fe"
   }
 }

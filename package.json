@@ -10,10 +10,14 @@
   "license": "ISC",
   "dependencies": {
     "angular": "^1.4.9",
-    "ts-loader": "^0.8.0"
+    "bootstrap": "^3.3.6"
   },
   "devDependencies": {
-    "webpack-dev-server": "^1.14.1",
-    "webpack-typescript": "^0.5.6"
+    "css-loader": "^0.23.1",
+    "file-loader": "^0.8.5",
+    "style-loader": "^0.13.0",
+    "ts-loader": "^0.8.0",
+    "url-loader": "^0.5.7",
+    "webpack-dev-server": "^1.14.1"
   }
 }
