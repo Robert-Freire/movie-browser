@@ -10,6 +10,7 @@ namespace app.movies {
         static $inject: Array<string> = ['moviesdataservice'];
 
         constructor(private moviesdataservice: app.dataservices.IMoviesDataService) {
+            this.movie = <app.model.IMovie>{ };
         };
 
         private loadMovie (id: string) {
@@ -20,5 +21,5 @@ namespace app.movies {
     }
 
     angular.module('app.movies')
-        .controller('MoviesDetailController ', MoviesDetailController);
+        .controller('MoviesDetailController', MoviesDetailController);
 }

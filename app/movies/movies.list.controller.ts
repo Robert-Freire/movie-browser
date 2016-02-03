@@ -24,5 +24,5 @@ namespace app.movies {
     }
 
     angular.module('app.movies')
-        .controller('MoviesListController ', MoviesListController);
+        .controller('MoviesListController', MoviesListController);
 }
