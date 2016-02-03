@@ -1,4 +1,0 @@
-Revisar con https://github.com/johnpapa/generator-hottowel
-
-Poner a la derecha datos de la peli que estamos visualizando
-Mover uris a json de configuracion de constantes
