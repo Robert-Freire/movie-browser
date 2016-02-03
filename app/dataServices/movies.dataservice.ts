@@ -33,7 +33,7 @@ namespace app.dataservices {
         }
 
         private api_key: string = 'ba7dc0d5812ddda58e32b566e91d4688';
-        public imagesUri: string = 'https://IMoviemdb.org/t/p/w185/';
+        public imagesUri: string = 'https://image.tmdb.org/t/p/w185/';
         private serverUri: string = 'http://api.themoviedb.org/3/';
         public getList(): ng.IPromise<app.model.IMovie[]> {
             var path = this.serverUri + 'discover/movie?sort_by=popularity.desc&api_key=' + this.api_key;
@@ -48,7 +48,7 @@ namespace app.dataservices {
         }
 
         public get(id: string): ng.IPromise<app.model.IMovie> {
-            var path = this.serverUri + 'discover/movie/' + id + '?api_key=' + this.api_key;
+            var path = this.serverUri + 'movie/' + id + '?api_key=' + this.api_key;
 
             var deferred = this.$q.defer();
             this.$http.get(path).success((data: app.model.IMovie) => {

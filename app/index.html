@@ -7,9 +7,11 @@
 	<link rel="stylesheet" href="../css/app.css">
 	<script src="../bower_components/angular/angular.js"></script>
 	<script src="./movies.js"></script>
-    <style>[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
-      display: none !important;
-    }</style>
+    <style>
+	    .ng-cloak {
+	      display: none !important;
+	    }
+    </style>
 </head>
 <body class="ng-cloak">
 
@@ -32,14 +34,14 @@
 				<div >
 					<!--Body content-->
 					<ul class="movies row">
-						<li ng-repeat="movie in moviesListCtrl.movies | filter:query  | orderBy:moviesListCtrl.orderProp" class="col-md-3 movie">
-							<div><img src="{{moviesCtrl.imagesUri}}{{movie.poster_path}}"></div>
-							{{movie.title}}			
+						<li ng-repeat="movie in moviesListCtrl.movies | filter:query  | orderBy:moviesListCtrl.orderProp" class="col-md-3 movie" ng-click="moviesListCtrl.loadMovie(movie.id)">
+							<div><img ng-src="{{moviesListCtrl.imagesUri}}{{movie.poster_path}}"></div>{{movie.title}}
 						</li>
 					</ul>
 				</div>
 			</div>
-			<div class="col-md-3 row" ng-controller="movie as detail" ng-style="{'background-image':'url({{detail.imagesUri}}{{detail.movie.backdrop_path}})'}">
+			<!-- detail info -->
+			<div class="col-md-3 row" ng-controller="MoviesDetailController as detail" ng-style="{'background-image':'url({{detail.imagesUri}}{{detail.movie.backdrop_path}})'}">
 				<div class="col-md-4 movie-label">Title: </div>
 				<div class="col-md-8 movie-data">{{detail.movie.title}} </div>
 				<div class="col-md-4 movie-label">Tagline: </div>
