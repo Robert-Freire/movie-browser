@@ -6,3 +6,4 @@ typings/
 app/bundle.js
 app/bundle.js.map
 out/
+dist/
