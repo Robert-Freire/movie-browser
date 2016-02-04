@@ -8,7 +8,7 @@ var APP = __dirname; // + '/app';
 
 module.exports = {
     context: APP,
-    entry: './out/index.js',
+    entry: './app/index.ts',
     output: {
         filename: 'bundle.js',
         path: 'dist'

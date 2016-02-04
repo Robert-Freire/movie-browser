@@ -1,64 +1,20 @@
 <!doctype html>
 <html lang="en">
-<head>
-	<meta charset="utf-8">
-	<title>Movie Browser</title>
+	<head>
+		<meta charset="utf-8">
+		<title>Movie Browser</title>
 
-	<script src="./bundle.js"></script>
-	
-    <style>
-	    .ng-cloak {
-	      display: none !important;
-	    }
-    </style>
-</head>
-<body class="ng-cloak">
-
-	<div class="container-fluid">
-		<div class="titleZone">
-			<h3> The Movie browser </h3>
-		</div>
-		<div class="row">
-			<div class="col-md-9" ng-controller="MoviesListController as moviesListCtrl"> 
-				<div class="searchZone">
-					<!--Search bar content-->
-					<label for="search">Search: </label><input ng-model="query" id="search">
-					<label for="sort">Sort by: </label>
-					<select ng-model="moviesCtrl.orderProp" id="sort">
-						<option value="title">Alphabetical</option>
-						<option value="popularity">Popularity</option>
-						<option value="vote_average">Vote</option>					
-					</select>
-				</div>
-				<div >
-					<!--Body content-->
-					<ul class="movies row">
-						<li ng-repeat="movie in moviesListCtrl.movies | filter:query  | orderBy:moviesListCtrl.orderProp" class="col-md-3 movie" ng-click="moviesListCtrl.loadMovie(movie.id)">
-							<div><img ng-src="{{moviesListCtrl.imagesUrl}}{{movie.poster_path}}"></div>{{movie.title}}
-						</li>
-					</ul>
-				</div>
-			</div>
-			<!-- detail info -->
-			<div class="col-md-3 row" ng-controller="MoviesDetailController as detail" ng-style="{'background-image':'url({{detail.imagesUri}}{{detail.movie.backdrop_path}})'}">
-				<div class="col-md-4 movie-label">Title: </div>
-				<div class="col-md-8 movie-data">{{detail.movie.title}} </div>
-				<div class="col-md-4 movie-label">Tagline: </div>
-				<div class="col-md-8 movie-data">{{detail.movie.tagline}} </div>
-				<div class="col-md-4 movie-label">Budget: </div>
-				<div class="col-md-8 movie-data">{{detail.movie.budget}} </div>
-				<div class="col-md-4 movie-label">Revenue: </div>
-				<div class="col-md-8 movie-data">{{detail.movie.revenue}} </div>
-				<div class="col-md-4 movie-label">Release date: </div>
-				<div class="col-md-8 movie-data">{{detail.movie.release_date}} </div>
-				<div class="col-md-4 movie-label">Vote average: </div>
-				<div class="col-md-8 movie-data">{{detail.movie.vote_average}} </div>
-				<div class="col-md-4 movie-label">Vote count: </div>
-				<div class="col-md-8 movie-data">{{detail.movie.vote_count}} </div>					
-				<div class="col-md-4 movie-label">Overview: </div>
-				<div class="col-md-8 movie-data">{{detail.movie.overview}} </div>
-			</div>
-		</div>
-	</div>
-</body>
+		<script src="./bundle.js"></script>
+		
+	    <style>
+		    .ng-cloak {
+		      display: none !important;
+		    }
+	    </style>
+	</head>
+	<body class="ng-cloak" ng-app="app">
+		<movies-browser-layout> 
+		</movies-browser-layout>
+		
+	</body>
 </html>

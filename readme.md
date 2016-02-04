@@ -1,8 +1,8 @@
 # Install
 
-1. bower install.
-2. typings install.
-3. webpack install
+1. typings install.
+2. webpack install
+3. npm install
 
 # Execute
 1. npm start
