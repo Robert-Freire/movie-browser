@@ -25,9 +25,6 @@ module.exports = {
     },
 
     plugins: [
-        // Adds minification
-        // new webpack.optimize.UglifyJsPlugin(),
-
         // copies/generates the index.html file to the dist folder
         new HtmlWebpackPlugin({
             template: './app/index.html',
@@ -36,13 +33,8 @@ module.exports = {
         }),
         new BrowserSyncPlugin({
             host: 'localhost',
-            port: 8080,
-            server: {
-                baseDir: 'dist'
-            },
-            ui: false,
-            online: false,
-            notify: false
+            port: 8082,
+            proxy: 'http://localhost:8080/'
         })
     ],
 

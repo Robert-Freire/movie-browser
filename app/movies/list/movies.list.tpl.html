@@ -1,0 +1,21 @@
+<div class="col-md-9" >   <!-- ng-controller="MoviesListController as moviesListCtrl" -->
+	<div class="searchZone">
+		<!--Search bar content-->
+		<label for="search">Search: </label><input ng-model="moviesListCtrl.query" id="search">
+		<select ng-model="moviesCtrl.orderProp" id="sort">
+			<option value="title">Alphabetical</option>
+			<option value="popularity">Popularity</option>
+			<option value="vote_average">Vote</option>					
+		</select>
+		<button type="button" ng-click="moviesListCtrl.previousPage()">Previous</button>
+		<button type="button" ng-click="moviesListCtrl.nextPage()">Next</button>
+	</div>
+	<div >
+		<!--Body content-->
+		<ul class="movies row">
+			<li ng-repeat="movie in moviesListCtrl.movies | filter:moviesListCtrl.query  | orderBy:moviesListCtrl.orderProp" class="col-md-3 movie" ng-click="moviesListCtrl.loadMovie(movie.id)">
+				<div><img ng-src="{{moviesListCtrl.imagesUrl}}{{movie.poster_path}}"></div>{{movie.title}}
+			</li>
+		</ul>
+	</div>
+</div>

@@ -4,7 +4,7 @@
   "description": "A typescript/angular 1 demo",
   "main": "app/index.html",
   "scripts": {
-    "start": "webpack-dev-server --config ./webpack.config.js"
+    "start": "webpack-dev-server --config ./webpack.config.js --port 8080 --open"
   },
   "author": "",
   "license": "ISC",

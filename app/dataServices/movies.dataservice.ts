@@ -14,9 +14,11 @@ export interface IMoviesDataService {
 
     /**
      * Returns a list of movies
-     * @return {ng.IPromise<app.model.IMovie[]>} [List of movies]
+     * @param  {number}                page [The page to retrive (1 if nothing is indicated)]
+     * @return {ng.IPromise<IMovie[]>}      [List of movies]
      */
     getList(): ng.IPromise<IMovie[]>;
+    getList(page: number): ng.IPromise<IMovie[]>;
 
     /**
      * Returns the details of a movie
@@ -37,8 +39,8 @@ export class MoviesDataService implements IMoviesDataService {
         private serverUrl: string) {
     }
 
-    public getList(): ng.IPromise<IMovie[]> {
-        var path = this.serverUrl + 'discover/movie?sort_by=popularity.desc&api_key=' + this.apiKey;
+    public getList(page: number = 1): ng.IPromise<IMovie[]> {
+        var path = this.serverUrl + 'discover/movie?sort_by=popularity.desc&api_key=' + this.apiKey + '&page=' + page;
 
         var deferred = this.$q.defer();
         this.$http.get(path).success((data: any) => {

@@ -3,26 +3,7 @@
 		<h3> The Movie browser </h3>
 	</div>
 	<div class="row">
-		<div class="col-md-9" ng-controller="MoviesListController as moviesListCtrl"> 
-			<div class="searchZone">
-				<!--Search bar content-->
-				<label for="search">Search: </label><input ng-model="query" id="search">
-				<label for="sort">Sort by: </label>
-				<select ng-model="moviesCtrl.orderProp" id="sort">
-					<option value="title">Alphabetical</option>
-					<option value="popularity">Popularity</option>
-					<option value="vote_average">Vote</option>					
-				</select>
-			</div>
-			<div >
-				<!--Body content-->
-				<ul class="movies row">
-					<li ng-repeat="movie in moviesListCtrl.movies | filter:query  | orderBy:moviesListCtrl.orderProp" class="col-md-3 movie" ng-click="moviesListCtrl.loadMovie(movie.id)">
-						<div><img ng-src="{{moviesListCtrl.imagesUrl}}{{movie.poster_path}}"></div>{{movie.title}}
-					</li>
-				</ul>
-			</div>
-		</div>
+		<movies-list></movies-list>
 		<!-- detail info -->
 		<div class="col-md-3 row" ng-controller="MoviesDetailController as detail" ng-style="{'background-image':'url({{detail.imagesUri}}{{detail.movie.backdrop_path}})'}">
 			<div class="col-md-4 movie-label">Title: </div>

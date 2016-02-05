@@ -1,6 +1,6 @@
-import { MoviesListController } from  './movies.list.controller';
+import { MoviesList } from  './list/movies.list.directive';
 import { MoviesDetailController } from  './movies.detail.controller';
 
 angular.module('app.movies', [])
-	.controller('MoviesListController', MoviesListController)
+	.directive('moviesList', MoviesList.Factory())
 	.controller('MoviesDetailController', MoviesDetailController);
