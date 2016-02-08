@@ -2,32 +2,51 @@ import { Events } from '../../core/events';
 import { IMovie } from '../../model/movies';
 import { IMoviesDataService } from '../../dataservices/movies.dataservice';
 
-import './movies.list.tpl.html';
+import './movies.detail.tpl.html';
 
-interface IMoviesListController {
-    movies: IMovie;
-    orderProp: string;
-    imagesUrl: string;
-    loadMovie(id: string): void;
-    nextPage(): void;
-    previousPage(): void;
+
+interface IMoviesDetailController {
+    movie: IMovie;
 }
 
 /**
- * @desc component to show a list of movies
- * @example <movies-list></movies-list>>
+ * @desc Detail of the movie
+ * @example <plspHeader></plspHeader>
  */
-export class MoviesList implements ng.IDirective {
+export class MoviesDetail implements ng.IDirective {
     public restrict = 'AE';
-    public templateUrl = 'app/movies/list/movies.list.tpl.html';
-    public controller = MoviesListController;
-    public controllerAs = 'moviesListCtrl';
+    public templateUrl = 'app/movies/detail/movies.detail.tpl.html';
+    public controller = MoviesDetailController;
+    public controllerAs = 'moviesDetailCtrl';
     public bindToController = true;
 
     public static Factory() {
-        var moviesList = () => new MoviesList();
-        return moviesList;
+        var moviesDetail = () => new MoviesDetail();
+        return moviesDetail;
     }
+}
+
+class MoviesDetailController {
+    public movie: IMovie;
+
+    static $inject: Array<string> = ['moviesdataservice', '$rootScope'];
+
+    constructor(
+        private moviesdataservice: IMoviesDataService,
+        private $rootScope: ng.IRootScopeService) {
+
+        this.movie = <IMovie>{};
+
+        this.$rootScope.$on(Events.LoadMovie, (event: ng.IAngularEvent, id: string) => {
+            this.loadMovie(id);
+        });
+    };
+
+    private loadMovie(id: string) {
+        this.moviesdataservice.get(id).then((data: IMovie) => {
+            this.movie = data;
+        });
+    };
 }
 
 class MoviesListController {

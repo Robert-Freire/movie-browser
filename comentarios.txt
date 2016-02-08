@@ -11,11 +11,16 @@ Para el curso hay que comentar
 
 Encuesta
 
-proves
-
 Referencias
 https://github.com/seanhess/angularjs-typescript
 https://www.youtube.com/watch?v=u6TeBM_SC8w
 
 https://github.com/johnpapa/hottowel-angular-typescript
 https://channel9.msdn.com/Events/Build/2015/3-680
+
+
+git checkout webpack
+
+git branch
+
+git push --set-upstream origin webpack
