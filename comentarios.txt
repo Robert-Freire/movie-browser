@@ -11,7 +11,7 @@ Para el curso hay que comentar
 
 Encuesta
 
-
+proves
 
 Referencias
 https://github.com/seanhess/angularjs-typescript
