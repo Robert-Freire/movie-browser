@@ -13,6 +13,11 @@ interface IMoviesListController {
     previousPage(): void;
 }
 
+// interface IMoviesListScope extends ng.IScope {
+//     loadMovie(id: string): void;
+// }
+
+
 /**
  * @desc component to show a list of movies
  * @example <movies-list></movies-list>>
@@ -23,6 +28,15 @@ export class MoviesList implements ng.IDirective {
     public controller = MoviesListController;
     public controllerAs = 'moviesListCtrl';
     public bindToController = true;
+//    public link: ng.IDirectiveLinkFn;
+
+    constructor() {
+/*        this.link = (scope: IMoviesListScope, element: ng.IAugmentedJQuery, attrs: ng.IAttributes) => {
+            scope.loadMovie = (id: string) => {
+                scope.$emit(Events.LoadMovie, id);
+            };
+        };*/
+    }
 
     public static Factory() {
         var moviesList = () => new MoviesList();
@@ -48,9 +62,9 @@ class MoviesListController {
         this.loadMoviesPage(this.currentPage);
     };
 
-    public loadMovie(id: string) {
+    public loadMovie (id: string) {
         this.$rootScope.$emit(Events.LoadMovie, id);
-    }
+    };
 
     public nextPage() {
         this.loadMoviesPage(++this.currentPage);

@@ -14,7 +14,8 @@
 		<!--Body content-->
 		<ul class="movies row">
 			<li ng-repeat="movie in moviesListCtrl.movies | filter:moviesListCtrl.query  | orderBy:moviesListCtrl.orderProp" class="col-md-3 movie" ng-click="moviesListCtrl.loadMovie(movie.id)">
-				<div><img ng-src="{{moviesListCtrl.imagesUrl}}{{movie.poster_path}}"></div>{{movie.title}}
+				<div><img ng-src="{{moviesListCtrl.imagesUrl}}{{movie.poster_path}}"></div>
+				{{movie.title}}
 			</li>
 		</ul>
 	</div>

@@ -17,7 +17,7 @@ export class MoviesDetail implements ng.IDirective {
     public restrict = 'AE';
     public templateUrl = 'app/movies/detail/movies.detail.tpl.html';
     public controller = MoviesDetailController;
-    public controllerAs = 'moviesDetailCtrl';
+    public controllerAs = 'detail';
     public bindToController = true;
 
     public static Factory() {
@@ -48,41 +48,3 @@ class MoviesDetailController {
         });
     };
 }
-
-class MoviesListController {
-    public movies: IMovie[] = [];
-    public orderProp: string;
-    public imagesUrl: string;
-    private currentPage: number = 1;
-
-    static $inject: Array<string> = ['moviesdataservice', '$rootScope'];
-
-    constructor(
-        private moviesdataservice: IMoviesDataService,
-        private $rootScope: ng.IRootScopeService) {
-
-        this.orderProp = 'popularity';
-        this.imagesUrl = this.moviesdataservice.imagesUrl;
-
-        this.loadMoviesPage(this.currentPage);
-    };
-
-    public loadMovie(id: string) {
-        this.$rootScope.$emit(Events.LoadMovie, id);
-    }
-
-    public nextPage() {
-        this.loadMoviesPage(++this.currentPage);
-    }
-
-    public previousPage(id: string) {
-        this.loadMoviesPage(--this.currentPage);
-    }
-
-    private loadMoviesPage(page: number) {
-        this.moviesdataservice.getList(this.currentPage).then((data: IMovie[]) => {
-            this.movies = data;
-        });
-    }
-}
-    
