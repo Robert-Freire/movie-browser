@@ -11,16 +11,13 @@ Para el curso hay que comentar
 
 Encuesta
 
+    Prefiero hacer el workshop en Angular 1
+    Prefiero hacer el workshop en angular 2
+    Interes en unit testing de 1 (unit pa que) a 5 (Pero si es obligatorio)
+
 Referencias
 https://github.com/seanhess/angularjs-typescript
 https://www.youtube.com/watch?v=u6TeBM_SC8w
 
 https://github.com/johnpapa/hottowel-angular-typescript
 https://channel9.msdn.com/Events/Build/2015/3-680
-
-
-git checkout webpack
-
-git branch
-
-git push --set-upstream origin webpack
