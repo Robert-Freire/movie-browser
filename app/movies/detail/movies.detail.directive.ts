@@ -4,20 +4,20 @@ import { IMoviesDataService } from '../../dataservices/movies.dataservice';
 
 import './movies.detail.tpl.html';
 
-
 interface IMoviesDetailController {
     movie: IMovie;
 }
 
 /**
  * @desc Detail of the movie
- * @example <plspHeader></plspHeader>
+ * @example <movies-detail></movies-detail>
  */
-export class MoviesDetail implements ng.IDirective {
+export class MoviesDetail implements ng.IComponentOptions {
     public restrict = 'AE';
     public templateUrl = 'app/movies/detail/movies.detail.tpl.html';
     public controller = MoviesDetailController;
     public controllerAs = 'detail';
+
     public bindToController = true;
 
     public static Factory() {
