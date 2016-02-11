@@ -14,7 +14,6 @@ module.exports = {
         path: 'dist'
     },
 
-    // Turn on sourcemaps
     devtool: 'source-map',
 
     resolve: {

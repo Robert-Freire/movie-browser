@@ -25,7 +25,7 @@ export class MoviesList implements ng.IComponentOptions {
     public bindToController = true;
 
     public static Factory() {
-        var moviesList = () => new MoviesList();
+        var moviesList = new MoviesList();
         return moviesList;
     }
 }
