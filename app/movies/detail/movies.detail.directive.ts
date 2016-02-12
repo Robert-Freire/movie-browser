@@ -18,6 +18,7 @@ export class MoviesDetail implements ng.IComponentOptions {
     public controller = MoviesDetailController;
     public controllerAs = 'detail';
 
+
     public bindToController = true;
 
     public static Factory() {
@@ -28,13 +29,16 @@ export class MoviesDetail implements ng.IComponentOptions {
 
 class MoviesDetailController {
     public movie: IMovie;
+    public imagesUrl: string;
 
-    static $inject: Array<string> = ['moviesdataservice', '$rootScope'];
+    static $inject: Array<string> = ['moviesdataservice', '$rootScope', 'imagesDetailUrl'];
 
     constructor(
         private moviesdataservice: IMoviesDataService,
-        private $rootScope: ng.IRootScopeService) {
+        private $rootScope: ng.IRootScopeService,
+        imagesDetailUrl: string) {
 
+        this.imagesUrl = imagesDetailUrl;
         this.movie = <IMovie>{};
 
         this.$rootScope.$on(Events.LoadMovie, (event: ng.IAngularEvent, id: string) => {
