@@ -8,6 +8,7 @@ Para el curso hay que comentar
 	5- Desactivar efecto {{}}
     6- Diferencias de comportamiento con this, Entre function () y () =>
     7- Pasar app de auto a codigo
+    8- Paso de parametros entre componentes. Por eventos y por require
 
 Encuesta
 

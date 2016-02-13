@@ -4,14 +4,18 @@ import { IMoviesDataService } from '../../dataservices/movies.dataservice';
 
 import './movies.list.tpl.html';
 
-interface IMoviesListController {
-    movies: IMovie;
-    orderProp: string;
-    imagesUrl: string;
-    loadMovie(id: string): void;
-    nextPage(): void;
-    previousPage(): void;
-}
+export interface IMoviesListController {
+    onLoadMovie(handler: (idMovie: string) => void): void;
+};
+
+// interface IMoviesListController {
+//     movies: IMovie;
+//     orderProp: string;
+//     imagesUrl: string;
+//     loadMovie(id: string): void;
+//     nextPage(): void;
+//     previousPage(): void;
+// }
 
 /**
  * @desc component to show a list of movies
@@ -30,11 +34,12 @@ export class MoviesList implements ng.IComponentOptions {
     }
 }
 
-class MoviesListController {
+class MoviesListController implements IMoviesListController {
     public movies: IMovie[] = [];
     public orderProp: string;
     public imagesUrl: string;
     private currentPage: number = 1;
+    private showMovies: ((idMovie: string) => void)[] = [];
 
     static $inject: Array<string> = ['moviesdataservice', '$rootScope'];
 
@@ -48,8 +53,14 @@ class MoviesListController {
         this.loadMoviesPage(this.currentPage);
     };
 
+    public onLoadMovie(handler: (idMovie: string) => void): void {
+        this.showMovies.push(handler);
+    }
+
     public loadMovie (id: string) {
-        this.$rootScope.$emit(Events.LoadMovie, id);
+        this.showMovies.forEach((showMovie) => {
+            showMovie(id);
+        });
     };
 
     public nextPage() {

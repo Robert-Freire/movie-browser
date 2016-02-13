@@ -1,6 +1,7 @@
 import { Events } from '../../core/events';
 import { IMovie } from '../../model/movies';
 import { IMoviesDataService } from '../../dataservices/movies.dataservice';
+import { IMoviesListController } from '../list/movies.list.directive';
 
 import './movies.detail.tpl.html';
 
@@ -17,7 +18,12 @@ export class MoviesDetail implements ng.IComponentOptions {
     public templateUrl = 'app/movies/detail/movies.detail.tpl.html';
     public controller = MoviesDetailController;
     public controllerAs = 'detail';
-
+    // public bindings = {
+    //     idMovie: '<'
+    // };
+    public require = {
+        moviesList: '^moviesList'
+    };
 
     public bindToController = true;
 
@@ -30,6 +36,8 @@ export class MoviesDetail implements ng.IComponentOptions {
 class MoviesDetailController {
     public movie: IMovie;
     public imagesUrl: string;
+    public $onInit: () => void;
+    public moviesList: IMoviesListController;
 
     static $inject: Array<string> = ['moviesdataservice', '$rootScope', 'imagesDetailUrl'];
 
@@ -41,6 +49,13 @@ class MoviesDetailController {
         this.imagesUrl = imagesDetailUrl;
         this.movie = <IMovie>{};
 
+        this.$onInit = function() {
+            this.moviesList.onLoadMovie((idMovie: string) => {
+                this.loadMovie(idMovie);
+            });
+  //          this.tabsCtrl.addPane(this);
+            console.log(this);
+        };
         this.$rootScope.$on(Events.LoadMovie, (event: ng.IAngularEvent, id: string) => {
             this.loadMovie(id);
         });
