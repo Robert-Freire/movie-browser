@@ -1,4 +1,6 @@
 Para el curso hay que comentar
+	
+	0- Comenzar presentación. Mostrando codigo con clases, arrow syntax & imports en ECMA 6
 
 	1. - Controller AS syntax
 	2. - Nomenclaturaa
