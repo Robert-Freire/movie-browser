@@ -1,0 +1,6 @@
+1. Pasar del uso de require a los modulos de ECMA6
+	1.1 instalamos babel loader (npm install babel-loader --save-dev)
+	1.2 configuramos 
+
+
+En este paso hemos pasado de utilizar requeryJs al sistema de modulos de ECMA6 y hemos visto como funcionan los modulos en webpackl
