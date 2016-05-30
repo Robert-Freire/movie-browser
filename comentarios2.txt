@@ -1,0 +1,7 @@
+0. Introducción a ECMA 6. ECMA 6 y typescript
+
+1. Setup de webpack con angular
+	1.1 Run npm init y configurar la version inicial
+	1.2 Instalar webPack (npm install webpack --save-dev)
+	1.3 Crear una pagina html que salude al entrar
+	1.4 spararlo en dos componentes con require y dejar que webpack haga el bundle
