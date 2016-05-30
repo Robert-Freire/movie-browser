@@ -1,7 +1,5 @@
-"use strict";
-
 export default class Message {
-	static show (message){
+	static show (message: string) {
 		alert (message);
 	}
 }

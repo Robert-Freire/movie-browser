@@ -1,6 +1,7 @@
 1. Pasar del uso de require a los modulos de ECMA6
-	1.1 instalamos babel loader (npm install babel-loader --save-dev)
-	1.2 configuramos 
+	1.1 instalamos babel loader (npm install babel-loader babel-preset-es2015 babel-core --save-dev)
+	1.2 configuramos el loader de babel en webpack.config.js
+	1.3 modificamos inde.js para usar sintaxis ECMA6
 
 
-En este paso hemos pasado de utilizar requeryJs al sistema de modulos de ECMA6 y hemos visto como funcionan los modulos en webpackl
+En este paso hemos pasado de utilizar requeryJs al sistema de modulos de ECMA6 y hemos visto como funcionan los modulos en webpack.  Tambien vemos como usando un transpolador como babel podemos desarrollar en ECMA6 

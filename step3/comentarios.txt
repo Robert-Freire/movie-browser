@@ -1,0 +1,6 @@
+1. Configurar webpack con el uso de typescript.
+	1.1 Quitamos babel. Comentamos que para usar ECMAScript 6 tenemos las dos opciones Babel y typescript
+	1.2. Configuramos el loader de typescript
+	1.3. Modificacmos el codigo 
+	
+En este paso hemos hecho nuestra primer toque con typescript. Lo hemos viusto como un superset de ja.vascript. Realmente solo añade una serie de "pistas" para que nuestras tools tengas mas opciones de ayudarnos a nivel de detectar errores y de facilitar refactorizaciones
