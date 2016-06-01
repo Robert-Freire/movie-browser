@@ -3,4 +3,4 @@
 	1.2. Configuramos el loader de typescript
 	1.3. Modificacmos el codigo 
 	
-En este paso hemos hecho nuestra primer toque con typescript. Lo hemos viusto como un superset de ja.vascript. Realmente solo añade una serie de "pistas" para que nuestras tools tengas mas opciones de ayudarnos a nivel de detectar errores y de facilitar refactorizaciones
+En este paso hemos hecho nuestra primer toque con typescript. Lo hemos viusto como un superset de javascript. Realmente solo añade una serie de "hints" para que nuestras tools tengas mas opciones de ayudarnos a nivel de detectar errores y de facilitar refactorizaciones
