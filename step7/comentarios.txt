@@ -3,6 +3,13 @@ npm install jasmine-core --save-dev
 npm install karma --save-dev
 npm install karma-jasmine karma-chrome-launcher --save-dev
 1. npm install -g karma-cli
-karma init
 npm install angular-mocks
-npm install karma-typescript-preprocessor --save-dev
+npm install karma-webpack
+karma init
+
+Modify karma to launch webpack for the typescripts
+Modify karma to load angular-mocks
+Modify karma to load jasmine librerys
+Create jasmine test
+
+

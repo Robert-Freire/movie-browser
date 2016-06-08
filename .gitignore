@@ -7,3 +7,4 @@ app/bundle.js
 app/bundle.js.map
 out/
 dist/
+karma_html/
