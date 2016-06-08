@@ -1,0 +1,4 @@
+Refactorizar controller en componente
+  Mover codigo a movies-list-component.
+  Hablar de los templates de ECMA6
+

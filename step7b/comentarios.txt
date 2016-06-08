@@ -1,0 +1,7 @@
+Convertir test a typescript
+typings install dt~jasmine --global --save
+convertir codigo de index.spec.js a index.spec.ts
+modificar karma.conf para cargar los test despues de los mocks
+
+
+
