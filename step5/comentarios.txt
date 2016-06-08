@@ -1,0 +1,8 @@
+Añadir angular
+1. npm install angular -save
+2. anadir en webpack     
+	resolveLoader: {
+        root: __dirname + '/node_modules'
+    },
+    y activar js en extensions
+3. Configurar index.ts para que cargue angular    
