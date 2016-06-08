@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en" ng-app="moviesBrowserApp">
+	<head>
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+
+		<title>The movie browser</title>
+	    <script src="./bundle.js"></script>
+	</head>
+	<body ng-controller="MoviesListController as moviesList">
+		<ul>
+			<li ng-repeat="movie in moviesList.movies">
+				<img ng-src="{{moviesList.imagesUrl}}{{movie.poster_path}}" title="{{movie.title}}">
+				<div class="caption"> {{movie.title}} </div>
+			</li>
+		</ul>
+	</body>
+</html>

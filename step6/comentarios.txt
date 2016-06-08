@@ -1,0 +1,6 @@
+Implementar MVC. Obtener una lista de peliculas
+1. Instalar typings
+2. typings install dt~angular --global --save
+3. typings install dt~jquery --global --save
+5. Añadir controller en index.ts
+6. Modificar index.html
