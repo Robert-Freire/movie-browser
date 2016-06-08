@@ -2,4 +2,4 @@
 
 import message from './message';
 
-message.show("welcome 65gg5");
+message.show("welcome 655aa");

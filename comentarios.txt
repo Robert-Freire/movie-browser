@@ -14,12 +14,6 @@ Para el curso hay que comentar
     7- Pasar app de auto a codigo
     8- Paso de parametros entre componentes. Por eventos y por require
 
-Encuesta
-
-    Prefiero hacer el workshop en Angular 1
-    Prefiero hacer el workshop en angular 2
-    Interes en unit testing de 1 (unit pa que) a 5 (Pero si es obligatorio)
-
 Referencias
 https://github.com/seanhess/angularjs-typescript
 https://www.youtube.com/watch?v=u6TeBM_SC8w

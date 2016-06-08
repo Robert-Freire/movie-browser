@@ -12,9 +12,11 @@ module.exports = {
     },
     devtool: 'source-map',
     resolve: {
-        extensions: ['', '.ts']
+        extensions: ['', '.ts', '.js']
     },
-
+    resolveLoader: {
+        root: __dirname + '/node_modules'
+    },
     plugins: [
         new BrowserSyncPlugin({
             host: 'localhost',
