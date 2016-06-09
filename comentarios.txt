@@ -1,22 +1,55 @@
 Para el curso hay que comentar
+
+8:30	
+	1	5'		Explicar que es webpack 5' Pendiente powerpoint 
+	2	20'		step 1 Enseñar lo que se quiere y que configure webpack  https://webpack.github.io/docs/tutorials/getting-started/
+
+	3	20'		Hablar de que ECMA6 salio el año pasado pero la idea es que no vuelva a pasr lo que ocurrio entre la version 5.1 en 2011 y la actual ECMA6 de 2015 no se quiere que vuelva a pasar ECMA se va a ir actualizando mucho mas regularmente (la siguiente version ES2016 / ES7  ya esta avanzada http://www.2ality.com/2016/01/ecmascript-2016.html) pero eso no significa que los browser vayan a ir tan deprisa. Frente a este escenario. O nos quedamos anclados en versiones antiguas del standard ,soportadas en la mayoria de los browsers, o comenzamos a usar transpilers y aqui tenemos dos grandes opciones Babel y typescript
+
+		Pendiente powepoint
+	4 	20' 	Step 2   Pedir que comiencen a usar los imports de ECMA6 y que  https://babeljs.io/docs/setup/#installation  
+
+	5	15' 	Explicacion de que es typescript 15'
 	
-	0- Comenzar presentación. Mostrando codigo con clases, arrow syntax & imports en ECMA 6. 
+	6	20' 	Step 3
+		 20 10h
+		step 4 20 
 
-        0.a -Revisar ECMA6 para buscar mejores ejemplos de codigo
+		descanso 15'  
+		
+		step 5 20  11h
 
-	1. - Controller AS syntax
-	2. - Nomenclaturaa
-	3. - Estructura de directorios
-	4. - Typescript. Namespaces
 
-	5- Desactivar efecto {{}}
-    6- Diferencias de comportamiento con this, Entre function () y () =>
-    7- Pasar app de auto a codigo
-    8- Paso de parametros entre componentes. Por eventos y por require
+		Explicacion basica de que es angular 15'
+		step 6 30
 
-Referencias
-https://github.com/seanhess/angularjs-typescript
-https://www.youtube.com/watch?v=u6TeBM_SC8w
+		Explicar que es jasmine y que es karma 15'
+		step 7 => dividir en 2 configurar entorno 10'.   
+		                        realizar test     20' 
+		step 8  30'
 
-https://github.com/johnpapa/hottowel-angular-typescript
-https://channel9.msdn.com/Events/Build/2015/3-680
+		comida 13:00
+		setp 9  20' explicacion estructura
+
+
+		step 10' 30'  Añadir data service
+		step 10b 20'  Añadir test con mock de backend
+
+		15:00
+		step 11b añadir paginacion 30' 13:00h
+
+		step 11c añadir estilos 30'
+		16:00
+
+
+
+		step 12  maestro detalle 60' 
+
+		explicar routing 15'
+		step 13 añadir routing 30'
+
+		almuerzo
+		step 14 mover a pagina de detalle 60'
+		step 13  15'  deploy en producción 30'
+
+		comida
