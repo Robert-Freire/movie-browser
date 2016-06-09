@@ -1,12 +1,12 @@
 {
-  "name": "step8",
+  "name": "step9",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "author": "",
   "license": "ISC",
   "scripts": {
-    "start": "webpack-dev-server --config ./webpack.config.js --port 8080 --open",
+    "start": "webpack & webpack-dev-server --config ./webpack.config.js --port 8080 --open",
     "postinstall": "typings i",
     "test": "webpack & karma start"
   },

@@ -1,0 +1,5 @@
+Extructura de directorios
+  App
+  	/recursos 
+  	 	modulos
+ Uso de index.ts para gestionar import y exports
