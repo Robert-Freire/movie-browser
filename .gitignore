@@ -3,8 +3,8 @@ node_modules/
 bower_components/
 npm-debug.log
 typings/
-app/bundle.js
-app/bundle.js.map
+bundle.js
+bundle.js.map
 out/
 dist/
 karma_html/
