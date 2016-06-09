@@ -1,6 +1,6 @@
 // Karma configuration
 // Generated on Wed Jun 08 2016 14:12:47 GMT+0200 (W. Europe Daylight Time)
-
+var path = require('path');
 module.exports = function(config) {
   config.set({
 
@@ -12,13 +12,12 @@ module.exports = function(config) {
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
     frameworks: ['jasmine'],
 
-
     // list of files / patterns to load in the browser
     files: [
         'node_modules/jasmine-core/lib/jasmine-core/jasmine.js',
-        '*.ts',
+        './bundle.js',
         'node_modules/angular-mocks/angular-mocks.js',
-        '*.js'      
+        '*.spec.js'      
     ],
 
 
@@ -26,39 +25,6 @@ module.exports = function(config) {
     exclude: [ '*config.js', '*conf.js'
     ],
 
-
-    // preprocess matching files before serving them to the browser
-    // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
-    preprocessors: {
-        '**/*.ts': ['webpack']
-    },
-
-    webpack: {
-        entry: './index.ts',
-        output: {
-            filename: 'bundle.js'
-        },
-        devtool: 'source-map',
-        resolve: {
-            extensions: ['', '.ts', '.js']
-        },
-        resolveLoader: {
-            root: __dirname + '/node_modules'
-        },
-        plugins: [
-        ],
-        module: {
-            loaders: [
-                {test: /\.ts$/, loader: 'ts-loader'}
-            ]
-        }
-    },
-
-    webpackMiddleware: {
-        // webpack-dev-middleware configuration
-        // i. e.
-        noInfo: true
-    },
 
     // test results reporter to use
     // possible values: 'dots', 'progress'
@@ -80,17 +46,17 @@ module.exports = function(config) {
 
 
     // enable / disable watching file and executing tests whenever any file changes
-    autoWatch: true,
+    autoWatch: false,
 
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: ['Chrome'],
+    browsers: ['PhantomJS'],
 
 
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits
-    singleRun: false,
+    singleRun: true,
 
     // Concurrency level
     // how many browser should be started simultaneous

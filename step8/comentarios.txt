@@ -1,4 +1,4 @@
 Refactorizar controller en componente
   Mover codigo a movies-list-component.
   Hablar de los templates de ECMA6
-
+  configurar los test para trabajar con js directamente y phantomjs
