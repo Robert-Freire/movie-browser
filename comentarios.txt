@@ -1,55 +1,94 @@
 Para el curso hay que comentar
 
 8:30	
-	1	5'		Explicar que es webpack 5' Pendiente powerpoint 
-	2	20'		step 1 Enseñar lo que se quiere y que configure webpack  https://webpack.github.io/docs/tutorials/getting-started/
+	1	10´		Presentacion curso
+	2	5´		Configuracion entorno. Instalar node. 		
+	3	5'		Explicar que es webpack 5' 
+		Pendiente powerpoint 
+	4	20'		step 1 Enseñar lo que se quiere y que configure webpack  https://webpack.github.io/docs/tutorials/getting-started/
+		Pdte. Modificar codigo para usar sintaxis ECMA5
+	4	20'		Hablar de que ECMA6 salio el año pasado pero la idea es que no vuelva a pasr lo que ocurrio entre la version 5.1 en 2011 y la actual ECMA6 de 2015 no se quiere que vuelva a pasar ECMA se va a ir actualizando mucho mas regularmente (la siguiente version ES2016 / ES7  ya esta avanzada http://www.2ality.com/2016/01/ecmascript-2016.html) pero eso no significa que los browser vayan a ir tan deprisa. Frente a este escenario. O nos quedamos anclados en versiones antiguas del standard ,soportadas en la mayoria de los browsers, o comenzamos a usar transpilers y aqui tenemos dos grandes opciones Babel y typescript. Ver algunos cambios en typescript
 
-	3	20'		Hablar de que ECMA6 salio el año pasado pero la idea es que no vuelva a pasr lo que ocurrio entre la version 5.1 en 2011 y la actual ECMA6 de 2015 no se quiere que vuelva a pasar ECMA se va a ir actualizando mucho mas regularmente (la siguiente version ES2016 / ES7  ya esta avanzada http://www.2ality.com/2016/01/ecmascript-2016.html) pero eso no significa que los browser vayan a ir tan deprisa. Frente a este escenario. O nos quedamos anclados en versiones antiguas del standard ,soportadas en la mayoria de los browsers, o comenzamos a usar transpilers y aqui tenemos dos grandes opciones Babel y typescript
 
 		Pendiente powepoint
-	4 	20' 	Step 2   Pedir que comiencen a usar los imports de ECMA6 y que  https://babeljs.io/docs/setup/#installation  
+9:30
 
+	4 	15' 	Step 2a   Pedir que transformen el codigo a ECMA 6 comiencen a usar  clases y arrow functions 
+		Pendiente crear step
+	5	15'		step 2b   Pedrir que usen imports y babel  https://babeljs.io/docs/setup/#installation  
+		Pendiente redefinir step
 	5	15' 	Explicacion de que es typescript 15'
-	
-	6	20' 	Step 3
-		 20 10h
-		step 4 20 
+		Pendiente powerpoint
+	6	15' 	Step 3a	Instalar typescript. Pedir que conviertan el codigo a typescript y que lo compilen
+		10' 	Step 3b Add imports. Compilar con webpack
+10:40
 
-		descanso 15'  
-		
-		step 5 20  11h
+	7   20'    descanso 
+
+11:00h		
+
+	8	15' step 4 Configurar webpackserver para debuggar y refrescar 
+	9	15'	Explicar en que consiste angular
+	10	15' Step 5. Pedir que anadan angular. Buscar alguna pagina que explique los pasos	
+	11	30' Step 6. Primer MVC. Pasar json y pedir que lo muestren	
+
+12:15h
+
+	12	10'  Explicar que es jasmine
+	13	10'  Configurar entorno para ejecutar jasmine as a standalone
+	14	20'	 Step 7a. Primer test en jasmine
+	15	5'   Explicar que es Karma
+	16	10'	 Step 7b. Pedir que configuren karma
+
+13:10h
+
+	17	60'   Comida
+
+14:15h
+	18	10' Explicar que son los componentes
+	19	30'	Step 8. Refactorizar codigo a componentes
+	20	5' Reestructuracion del codigo. Que se propone. Ir a John Papa. Best practiques
+	21	15' Step 9 Reestructurar codigo
+
+15:15h
+	22	5'	Explicar interfaces. Ceacion de nuestro modelo. Creacion de los data services
+	23	20' Step 10a. Anadir data service. Pedir que lo creen
+	24	20' Step 10b. Anadir test con mock de backend
+
+16:00h
+
+	25	Gulp
 
 
-		Explicacion basica de que es angular 15'
-		step 6 30
+8:30h
 
-		Explicar que es jasmine y que es karma 15'
-		step 7 => dividir en 2 configurar entorno 10'.   
-		                        realizar test     20' 
-		step 8  30'
+	26	5' 	Explicar filtros en angular
+	27  30'	Step 11 Pedir que anadan filtros y ordenacion
 
-		comida 13:00
-		setp 9  20' explicacion estructura
+9:05h
 
+	28	45' Step 12. Que anadan paginacion con test
+	29	15' Step 13. Pasar estilos y que los anadan buscar pagina que lo explique
 
-		step 10' 30'  Añadir data service
-		step 10b 20'  Añadir test con mock de backend
+10:05h
 
-		15:00
-		step 11b añadir paginacion 30' 13:00h
+	30 25' Almuerzo
 
-		step 11c añadir estilos 30'
-		16:00
+10:30h
+	31	40' Step 14a Maestro detalle
+	32	30'	Step 14b Crear test
 
+11:40h
+	33	10' Explicar routing
+	34	30' Step 15a Crear pagina de detalle
+	35	30' Step 15a Crear test pagina de detalle
+	36	10' Step 15a Crear routing a pagina de detalle
 
+13:00h
 
-		step 12  maestro detalle 60' 
+	37	60' Comida
 
-		explicar routing 15'
-		step 13 añadir routing 30'
+14:00h
 
-		almuerzo
-		step 14 mover a pagina de detalle 60'
-		step 13  15'  deploy en producción 30'
-
-		comida
+	38	5' 	Explicar tareas para deploy en produccion. Utilizar WebPack para eso
+	39	30'	Step 16. Deploy en produccion
