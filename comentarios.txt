@@ -97,3 +97,6 @@ Para el curso hay que comentar
 
 COMENTAR A ADRIA
 1- Si puede enseñar de meter constantes de json en js
+
+PENDIENTE
+Step 10. Anadir test con mock de backend

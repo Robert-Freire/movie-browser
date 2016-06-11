@@ -1,4 +1,4 @@
-import { IMovie } from './../../model';
+import { IMovie } from './../model';
 
 /**
  * DataService o retrieve movies

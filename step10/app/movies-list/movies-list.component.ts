@@ -1,6 +1,4 @@
-import {IMovie} from './../model';
-import {IMoviesDataService} from './../shared';
-
+import {IMoviesDataService, IMovie} from './../shared';
 
 export interface IMoviesListController{
     imagesUrl:string,
