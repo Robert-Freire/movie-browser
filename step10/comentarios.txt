@@ -1,1 +1,4 @@
+Hanlar de la web de pelicualr. URL a llamar y api key que necesitan 
+
 XHR. Data services
+interfaces.

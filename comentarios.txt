@@ -49,13 +49,15 @@ Para el curso hay que comentar
 	19	30'	Step 8. Refactorizar codigo a componentes
 	20	5' Reestructuracion del codigo. Que se propone. Ir a John Papa. Best practiques
 	21	15' Step 9 Reestructurar codigo
+	22	5'	Explicar constantes
+	22	15' Step 9b Refactorizar codigo para inyectar las constantes
 
-15:15h
-	22	5'	Explicar interfaces. Ceacion de nuestro modelo. Creacion de los data services
+15:35h
+	22	5'	Explicar interfaces. C22eacion de nuestro modelo. Creacion de los data services
 	23	20' Step 10a. Anadir data service. Pedir que lo creen
 	24	20' Step 10b. Anadir test con mock de backend
 
-16:00h
+16:20h
 
 	25	Gulp
 
@@ -92,3 +94,6 @@ Para el curso hay que comentar
 
 	38	5' 	Explicar tareas para deploy en produccion. Utilizar WebPack para eso
 	39	30'	Step 16. Deploy en produccion
+
+COMENTAR A ADRIA
+1- Si puede enseñar de meter constantes de json en js

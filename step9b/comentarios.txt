@@ -1,0 +1,3 @@
+Uso de constantes. 
+1. Explicar las constantes y pedir que las utilicen para el componente 
+'imagesUrl', 'https://image.tmdb.org/t/p/w185/

@@ -3,3 +3,4 @@ Extructura de directorios
   	/recursos 
   	 	modulos
  Uso de index.ts para gestionar import y exports
+ 
