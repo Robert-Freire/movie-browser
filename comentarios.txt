@@ -100,3 +100,4 @@ COMENTAR A ADRIA
 
 PENDIENTE
 Step 10. Anadir test con mock de backend
+Step 12. Añadir test de paginacion
