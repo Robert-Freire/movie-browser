@@ -3,3 +3,6 @@ Añadir routing
 Utilizar angular-route
  npm install angular-route --save
  typings install dt~angular-route --global --save
+
+
+http://viralpatel.net/blogs/angularjs-routing-and-views-tutorial-with-example/

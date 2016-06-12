@@ -7,4 +7,5 @@ bundle.js
 bundle.js.map
 out/
 dist/
+build/
 karma_html/
