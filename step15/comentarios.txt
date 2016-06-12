@@ -1,0 +1,5 @@
+Añadir routing
+
+Utilizar angular-route
+ npm install angular-route --save
+ typings install dt~angular-route --global --save
