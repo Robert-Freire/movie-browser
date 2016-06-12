@@ -2,6 +2,6 @@
 
 export default class Message {
 	static show (message){
-		alert (message);
+		document.write (message);
 	}
 }
