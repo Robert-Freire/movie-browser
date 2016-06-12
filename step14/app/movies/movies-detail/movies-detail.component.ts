@@ -1,9 +1,5 @@
-import { Events } from '../../core/events';
-import { IMovie } from '../../model/movies';
-import { IMoviesDataService } from '../../dataservices/movies.dataservice';
-import { IMoviesListController } from '../list/movies.list.directive';
-
-import './movies.detail.tpl.html';
+import { IMovie, IMoviesDataService } from '../../shared';
+import { IMoviesListController } from '../movies-list';
 
 interface IMoviesDetailController {
     movie: IMovie;
@@ -11,24 +7,17 @@ interface IMoviesDetailController {
 
 /**
  * @desc Detail of the movie
- * @example <movies-detail></movies-detail>
+ * @example <movIMoviesListControlleries-detail></movies-detail>
  */
 export class MoviesDetail implements ng.IComponentOptions {
     public restrict = 'AE';
-    public templateUrl = 'app/movies/detail/movies.detail.tpl.html';
+    public templateUrl = 'app/movies/movies-detail/movies-detail.tpl.html';
     public controller = MoviesDetailController;
     public controllerAs = 'detail';
 
-    public require = {
+    public require = { 
         moviesList: '^moviesList'
     };
-
-    public bindToController = true;
-
-    public static Factory() {
-        var moviesDetail = new MoviesDetail();
-        return moviesDetail;
-    }
 }
 
 class MoviesDetailController {
@@ -51,12 +40,9 @@ class MoviesDetailController {
             this.moviesList.onLoadMovie((idMovie: string) => {
                 this.loadMovie(idMovie);
             });
-  //          this.tabsCtrl.addPane(this);
             console.log(this);
         };
-        this.$rootScope.$on(Events.LoadMovie, (event: ng.IAngularEvent, id: string) => {
-            this.loadMovie(id);
-        });
+
     };
 
     private loadMovie(id: string) {

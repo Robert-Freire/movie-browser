@@ -1,0 +1,30 @@
+<div class="container-fluid">
+	<div class="searchZone">
+		<span class="titleZone">
+			<h3> The Movie browser </h3>
+		</span>
+		<!--Search bar content-->
+		<span class="pull-right">
+			<label for="search">Search: </label><input ng-model="moviesListCtrl.query" id="search">
+			<select ng-model="moviesCtrl.orderProp" id="sort">
+				<option value="title">Alphabetical</option>
+				<option value="popularity">Popularity</option>
+				<option value="vote_average">Vote</option>					
+			</select>
+			<a ng-click="moviesListCtrl.previousPage()" href="#"><i class="fa fa-chevron-left" aria-hidden="true"></i></a>
+			<a ng-click="moviesListCtrl.nextPage()" href="#"><i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+		</span>
+	</div>
+	<div >
+		<!--Body content-->
+		<div class="movies row"> 
+			<div ng-repeat="movie in moviesListCtrl.movies | filter:moviesListCtrl.query  | orderBy:moviesListCtrl.orderProp" class=" col-xs-4 col-sm-3 col-md-2 col-lg-1"> 
+				<div  class="thumbnail movie" ng-click="moviesListCtrl.loadMovie(movie.id)" >
+					<img ng-src="{{moviesListCtrl.imagesUrl}}{{movie.poster_path}}" title="{{movie.title}}">
+					<div> {{movie.title}} </div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<movies-detail></movies-detail> 
+</div>

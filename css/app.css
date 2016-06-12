@@ -1,3 +1,6 @@
+.searchZone{
+    height: 50px;
+}
 .titleZone h3{
     display: inline
 }
@@ -15,9 +18,7 @@
 .movie img{
     vertical-align: bottom;
 }
-.searchZone{
-    height: 50px;
-}
+
 .detail-movie{
     height: 100vw;
     background-color: #f6f6f5;

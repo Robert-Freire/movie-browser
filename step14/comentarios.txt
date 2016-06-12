@@ -1,1 +1,12 @@
-2 componente. Master detail. Comunicacion entre componentes
+2 componente. Master detail. 
+
+Comunicacion entre componentes
+B/ Suscripcion
+
+1- Modificar dataservice para cargar una unica pelicula
+2-Ampliar el interfaz de movie
+
+https://docs.angularjs.org/guide/component
+
+Controller as sintax
+estructura tree
