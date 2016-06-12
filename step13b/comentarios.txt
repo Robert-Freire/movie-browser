@@ -1,0 +1,6 @@
+Añadir font awesome
+
+https://gist.github.com/Turbo87/e8e941e68308d3b40ef6
+
+ npm install url-loader file-loader --save-dev
+ npm install font-awesome --save

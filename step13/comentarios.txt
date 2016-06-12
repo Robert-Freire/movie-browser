@@ -1,0 +1,7 @@
+Añadir estilos
+
+
+https://webpack.github.io/docs/stylesheets.html
+
+https://www.npmjs.com/package/font-awesome
+ npm install font-awesome --save

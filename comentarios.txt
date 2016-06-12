@@ -70,30 +70,33 @@ Para el curso hay que comentar
 9:05h
 
 	28	45' Step 12. Que anadan paginacion con test
-	29	15' Step 13. Pasar estilos y que los anadan buscar pagina que lo explique
+	29	15' Step 13a. Pasar estilos 
+	30	15' Step 13b. Que añadan bootstrap
 
-10:05h
+10:20h
 
-	30 25' Almuerzo
+	30 15' Almuerzo
 
-10:30h
+10:35h
 	31	40' Step 14a Maestro detalle
 	32	30'	Step 14b Crear test
 
-11:40h
+11:45h
 	33	10' Explicar routing
 	34	30' Step 15a Crear pagina de detalle
 	35	30' Step 15a Crear test pagina de detalle
 	36	10' Step 15a Crear routing a pagina de detalle
 
-13:00h
+13:05h
 
 	37	60' Comida
 
-14:00h
+14:05h
 
 	38	5' 	Explicar tareas para deploy en produccion. Utilizar WebPack para eso
 	39	30'	Step 16. Deploy en produccion
+
+14:40h
 
 COMENTAR A ADRIA
 1- Si puede enseñar de meter constantes de json en js
