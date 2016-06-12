@@ -1,2 +1,2 @@
 export * from './movies-list';
-export * from './movies-detail';
+export * from './movies-summary';
