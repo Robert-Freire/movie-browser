@@ -1,7 +1,7 @@
 "use strict";
 
-class message {
-	static show (message){
+var message = {
+	show: function (message){
 		document.write (message);
 	}
 }

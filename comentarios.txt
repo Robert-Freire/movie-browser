@@ -4,9 +4,7 @@ Para el curso hay que comentar
 	1	10´		Presentacion curso
 	2	5´		Configuracion entorno. Instalar node. 		
 	3	5'		Explicar que es webpack 5' 
-		Pendiente powerpoint 
 	4	20'		step 1 Enseñar lo que se quiere y que configure webpack  https://webpack.github.io/docs/tutorials/getting-started/
-		Pdte. Modificar codigo para usar sintaxis ECMA5
 	4	20'		Hablar de que ECMA6 salio el año pasado pero la idea es que no vuelva a pasr lo que ocurrio entre la version 5.1 en 2011 y la actual ECMA6 de 2015 no se quiere que vuelva a pasar ECMA se va a ir actualizando mucho mas regularmente (la siguiente version ES2016 / ES7  ya esta avanzada http://www.2ality.com/2016/01/ecmascript-2016.html) pero eso no significa que los browser vayan a ir tan deprisa. Frente a este escenario. O nos quedamos anclados en versiones antiguas del standard ,soportadas en la mayoria de los browsers, o comenzamos a usar transpilers y aqui tenemos dos grandes opciones Babel y typescript. Ver algunos cambios en typescript
 
 

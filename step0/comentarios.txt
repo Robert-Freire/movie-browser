@@ -1,0 +1,8 @@
+1. Setup basico de webpack
+	1.1 Run npm init y configurar la version inicial
+	1.2 Instalar webPack (npm install webpack --save-dev)
+	1.3 Crear una pagina html que salude al entrar
+	1.4 separarlo en dos componentes con require y dejar que webpack haga el bundle webpack ./app/index.js ./app/bundle.js
+	1.5 añadir archivo de configuracion
+	
+En este paso hemos configurado webpack y comenzado a ver la potencia que tiene a la hora de conectar los diferentes archivos de la aplicación	

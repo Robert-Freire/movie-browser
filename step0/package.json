@@ -1,0 +1,11 @@
+{
+  "name": "step1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^1.13.1"
+  }
+}
