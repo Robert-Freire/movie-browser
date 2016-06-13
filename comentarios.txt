@@ -13,12 +13,12 @@ Para el curso hay que comentar
 
 	4 	15' 	Step 2a   Pedir que transformen el codigo a ECMA 6 comiencen a usar  clases y arrow functions 
 		Pendiente crear step
-	5	15'		step 2b   Pedrir que usen imports y babel  https://babeljs.io/docs/setup/#installation  
+	5	15'		step 2b   Pedir que usen imports y babel  https://babeljs.io/docs/setup/#installation  
 		Pendiente redefinir step
 	5	15' 	Explicacion de que es typescript 15'
 		Pendiente powerpoint
 	6	15' 	Step 3a	Instalar typescript. Pedir que conviertan el codigo a typescript y que lo compilen
-		10' 	Step 3b Add imports. Compilar con webpack
+		10' 	Step 3b Add tsLoader. Compilar con webpack
 10:40
 
 	7   20'    descanso 

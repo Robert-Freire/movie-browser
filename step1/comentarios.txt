@@ -6,3 +6,6 @@
 	1.5 añadir archivo de configuracion
 	
 En este paso hemos configurado webpack y comenzado a ver la potencia que tiene a la hora de conectar los diferentes archivos de la aplicación	
+
+
+ELIMINAR CARPETA APP

@@ -1,4 +1,6 @@
-Hanlar de la web de pelicuas. URL a llamar y api key que necesitan 
+Hablar de la web de pelicuas. URL a llamar y api key que necesitan 
 Explicar promesas
 XHR. Data services
 interfaces.
+
+Mocks
