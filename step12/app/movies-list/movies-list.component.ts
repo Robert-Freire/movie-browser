@@ -23,7 +23,7 @@ class MoviesListController implements IMoviesListController {
         this.loadMoviesPage(++this.currentPage);
     }
 
-    public previousPage(id: string) {
+    public previousPage() {
         this.loadMoviesPage(--this.currentPage);
     }
 

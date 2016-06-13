@@ -26,11 +26,10 @@ class MoviesSummaryController {
     public $onInit: () => void;
     public moviesList: IMoviesListController;
 
-    static $inject: Array<string> = ['moviesdataservice', '$rootScope', 'imagesDetailUrl'];
+    static $inject: Array<string> = ['moviesdataservice', 'imagesDetailUrl'];
 
     constructor(
         private moviesdataservice: IMoviesDataService,
-        private $rootScope: ng.IRootScopeService,
         imagesDetailUrl: string) {
 
         this.imagesUrl = imagesDetailUrl;
@@ -40,7 +39,6 @@ class MoviesSummaryController {
             this.moviesList.onLoadMovie((idMovie: string) => {
                 this.loadMovie(idMovie);
             });
-            console.log(this);
         };
 
     };
