@@ -1,6 +1,7 @@
 // Karma configuration
 // Generated on Wed Jun 08 2016 14:12:47 GMT+0200 (W. Europe Daylight Time)
 var path = require('path');
+
 module.exports = function(config) {
   config.set({
 
@@ -15,7 +16,7 @@ module.exports = function(config) {
     // list of files / patterns to load in the browser
     files: [
         'node_modules/jasmine-core/lib/jasmine-core/jasmine.js',
-        './bundle.js',
+        './dist/bundle.js',
         'node_modules/angular-mocks/angular-mocks.js',
         'app/**/*.spec.js'      
     ],

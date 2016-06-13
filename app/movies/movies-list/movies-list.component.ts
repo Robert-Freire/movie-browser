@@ -1,20 +1,20 @@
 import {IMoviesDataService, IMovie} from './../../shared';
 
-export interface IMoviesListController{
-    imagesUrl:string,
-    movies: IMovie[],
+export interface IMoviesListController {
+    imagesUrl: string;
+    movies: IMovie[];
     onLoadMovie(handler: (idMovie: string) => void): void;
 }
 
 class MoviesListController implements IMoviesListController {
     static $inject: Array<string> = ['imagesUrl', 'moviesdataservice'];
-        
+
     public movies: IMovie[];
     private currentPage: number;
     private showMovies: ((idMovie: string) => void)[] = [];
 
-    constructor (public imagesUrl: string, 
-                private moviesdataservice: IMoviesDataService){
+    constructor (public imagesUrl: string,
+                private moviesdataservice: IMoviesDataService) {
 
         var vm = this;
         this.currentPage = 1;
@@ -42,7 +42,9 @@ class MoviesListController implements IMoviesListController {
     private loadMoviesPage(page: number) {
         this.moviesdataservice.getList(this.currentPage).then((movies: IMovie[]) => {
             this.movies = movies;
-            this.loadMovie(movies[0].id);
+            if (movies.length > 0) {
+                this.loadMovie(movies[0].id);
+            }
         });
     }
 }
@@ -51,7 +53,7 @@ class MoviesListController implements IMoviesListController {
  * @desc component to show a list of movies
  * @example <movies-list></movies-list>>
  */
-export class MoviesList implements ng.IComponentOptions{
+export class MoviesList implements ng.IComponentOptions {
     public template = `<div class="container-fluid">
     <div class="searchZone">
         <span class="titleZone">
@@ -81,8 +83,8 @@ export class MoviesList implements ng.IComponentOptions{
         </div>
     </div>
     <movies-summary></movies-summary> 
-</div>`
+</div>`;
     public controller = MoviesListController;
     public controllerAs = 'moviesListCtrl';
-}                     
+}
 
