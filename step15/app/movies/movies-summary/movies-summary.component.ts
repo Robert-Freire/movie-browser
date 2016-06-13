@@ -40,7 +40,6 @@ class MoviesSummaryController {
             this.moviesList.onLoadMovie((idMovie: string) => {
                 this.loadMovie(idMovie);
             });
-            console.log(this);
         };
 
     };

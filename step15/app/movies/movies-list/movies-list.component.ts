@@ -42,7 +42,9 @@ class MoviesListController implements IMoviesListController {
     private loadMoviesPage(page: number) {
         this.moviesdataservice.getList(this.currentPage).then((movies: IMovie[]) => {
             this.movies = movies;
-            this.loadMovie(movies[0].id);
+            if (movies.length > 0) {
+                this.loadMovie(movies[0].id);
+            }
         });
     }
 }
