@@ -43,7 +43,7 @@ Para el curso hay que comentar
 	17	60'   Comida
 
 14:15h
-	18	10' Explicar que son los componentes
+	18	10' Explicar que son los componenteAA
 	19	30'	Step 8. Refactorizar codigo a componentes
 	20	5' Reestructuracion del codigo. Que se propone. Ir a John Papa. Best practiques
 	21	15' Step 9 Reestructurar codigo
@@ -96,10 +96,3 @@ Para el curso hay que comentar
 	39	30'	Step 16. Deploy en produccion
 
 15:00h
-
-COMENTAR A ADRIA
-1- Si puede enseñar de meter constantes de json en js
-
-PENDIENTE
-Step 10. Anadir test con mock de backend
-Step 12. Añadir test de paginacion
